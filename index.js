@@ -9,6 +9,10 @@ app.get("/", (req, res) => {
   res.send("Hello, welcome to Docker Daemon!");
 });
 
+app.get("/test", (req, res) => {
+  res.send("This is a custom test!");
+});
+
 app.listen(port, () => {
   console.log("listening on port " + port);
 });
