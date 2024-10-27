@@ -4,5 +4,6 @@ const employeeController = require("../controllers/employeeController");
 const router = express.Router();
 
 router.post("/createEmployee", employeeController.createEmployee);
+router.get("/getAllEmployees", employeeController.getAllEmployees);
 
 module.exports = router;

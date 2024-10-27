@@ -19,6 +19,16 @@ const createEmployee = async (req, res, next) => {
   }
 };
 
+const getAllEmployees = async (req, res, next) => {
+  try {
+    const query = await EmployeeModel.find({});
+    res.status(200).json(query);
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   createEmployee,
+  getAllEmployees,
 };
