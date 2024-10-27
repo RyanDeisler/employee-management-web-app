@@ -1,10 +1,16 @@
 services:
   web-server:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    # environment:
+    #   - MONGO_URI=mongodb://mongo-db:27017/web-server
     ports:
       - 8080:8080
     depends_on:
-      - mongo
+      - mongo-db
   mongo-db:
     image: mongo:latest
     ports:
