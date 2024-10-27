@@ -2,9 +2,10 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const DepartmentSchema = new Schema({
-  name: {
+  departmentName: {
     type: String,
     required: true,
+    unique: true,
   },
 });
 
