@@ -6,7 +6,7 @@ const connectDb = require("./config/database");
 const app = express();
 
 connectDb();
-const port = process.env.NODE_LOCAL_PORT || 3020;
+const port = process.env.NODE_LOCAL_PORT || 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
