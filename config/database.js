@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const url = "mongodb://mongo:27017/employee-management-app";
+const url = "mongodb://localhost:27017/some-mongo";
 
 const connectDb = async () => {
   try {
