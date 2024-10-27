@@ -1,8 +1,14 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
-import { DepartmentSchema } from "./department";
 
-const employeeSchema = new Schema({
+const DepartmentSchema = new Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+});
+
+const EmployeeSchema = new Schema({
   firstName: {
     type: String,
     required: true,
@@ -17,4 +23,6 @@ const employeeSchema = new Schema({
   },
 });
 
-module.exports = mongoose.model("Employee", employeeSchema);
+const EmployeeModel = mongoose.model("Employee", EmployeeSchema);
+const DepartmentModel = mongoose.model("Department", DepartmentSchema);
+module.exports = { EmployeeModel, DepartmentModel };
